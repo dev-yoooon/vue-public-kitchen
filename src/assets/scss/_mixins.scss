@@ -1,0 +1,21 @@
+@mixin font($weight: null, $size: inherit) {
+	font-size: $size;
+	@if ($weight) {
+		font-weight: $weight;
+    }
+}
+@mixin noto($weight: null, $size:'') {
+	font-family: 'Noto', sans-serif;
+	font-size: $size;
+    @if ($weight) {
+		font-weight: $weight;
+    }
+}
+
+@mixin roboto($weight: null, $size:'') {
+	font-family: 'Roboto', sans-serif;
+	font-size: $size;
+	@if ($weight) {
+		font-weight: $weight;
+    }
+}
