@@ -1,3 +1,5 @@
+@use 'base' as base;
+
 .footer {
     padding: 40px 25px 46px;
     background: rgba(43, 42, 46, .9);
@@ -22,7 +24,7 @@
 
         li {
             position: relative;
-            @include font(200, 14px);
+            @include base.font(200, 14px);
             margin-left: 21px;
 
             &:before {
@@ -52,14 +54,14 @@
                 width: 100%;
                 margin-top: 10px;
                 margin-left: 0;
-                @include font(600, 14px);
+                @include base.font(600, 14px);
 
                 &:before {
                     display: none;
                 }
 
                 a {
-                    color: $white;
+                    color: base.$white;
                 }
             }
         }
@@ -71,7 +73,7 @@
 
         li {
             margin-top: 8px;
-            @include font(200, 13px);
+            @include base.font(200, 13px);
 
         }
 
@@ -83,7 +85,7 @@
             display: inline-block;
             margin-left: 4px;
             margin-right: 16px;
-            color: $white;
+            color: base.$white;
         }
     }
 
@@ -92,14 +94,14 @@
 
         .desc {
             margin-top: 10px;
-            @include font(200, 13px);
+            @include base.font(200, 13px);
             line-height: 22px;
             color: rgba(255, 255, 255, .8);
         }
 
         .copy {
             margin-top: 35px;
-            @include font(200, 14px);
+            @include base.font(200, 14px);
             color: rgba(255, 255, 255, .8);
         }
 
@@ -141,19 +143,19 @@
 
     .desc {
         margin-top: 14px;
-        @include font(200, 19px);
+        @include base.font(200, 19px);
         line-height: 1.57;
     }
 
     .contact {
         margin-top: 30px;
         padding: 15px 20px;
-        background: $gray-5b;
+        background: base.$gray-5b;
         border-radius: 3px;
 
         li {
-            @include font(400, 15px);
-            color: $white;
+            @include base.font(400, 15px);
+            color: base.$white;
 
             strong {
                 display: inline-block;
@@ -161,7 +163,7 @@
             }
 
             a {
-                color: $white;
+                color: base.$white;
                 font-weight: 200;
             }
 
@@ -190,7 +192,7 @@
 
     h4 {
         margin-top: 50px;
-        @include font(600, 19px);
+        @include base.font(600, 19px);
     }
 
     h3 {
@@ -200,7 +202,7 @@
 
     p {
         margin-top: 24px;
-        @include font(200, 18px);
+        @include base.font(200, 18px);
 
     }
 
@@ -231,7 +233,7 @@
         &.txt-depth02 {
             li {
                 margin-top: 16px;
-                @include font(200, 16px);
+                @include base.font(200, 16px);
                 line-height: 1.62;
 
                 strong {

@@ -10,6 +10,7 @@
     "test:unit": "vitest --environment jsdom --root src/"
   },
   "dependencies": {
+    "swiper": "^9.1.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

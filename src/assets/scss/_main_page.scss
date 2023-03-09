@@ -1,3 +1,5 @@
+@use 'base' as base;
+
 #content {
     padding-bottom: 40px;
 }
@@ -13,8 +15,8 @@
             span {
                 margin-right: 7px;
                 padding-left: 7px;
-                @include font(400, 15px);
-                color: $gray-7f;
+                @include base.font(400, 15px);
+                color: base.$gray-7f;
             }
         }
 
@@ -101,14 +103,14 @@
 
     height: 50px;
     padding: 0 26px;
-    background: $gray-2e;
+    background: base.$gray-2e;
 
     p {
-        @include font(600, 12px);
+        @include base.font(600, 12px);
         color: #CECECE;
 
         em {
-            color: $white;
+            color: base.$white;
             font-weight: inherit;
         }
     }
@@ -117,9 +119,9 @@
         display: inline-block;
         padding: 7px 21px 6px 10px;
         border-radius: 3px;
-        background: $point-color url(../img/main/btn-download.png) no-repeat right 8px top 8px/9px auto;
-        @include font(600, 10px);
-        color: $white;
+        background: base.$point-color url(../img/main/btn-download.png) no-repeat right 8px top 8px/9px auto;
+        @include base.font(600, 10px);
+        color: base.$white;
     }
 }
 

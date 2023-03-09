@@ -64,7 +64,7 @@ const action = reactive({
     <div class="gnb-bar">
         <h1 class="logo" @click="action.openMenu">
             <RouterLink to="/" aria-label="홈으로 가기">
-                <img src="public/logo.svg" alt="">
+                <img src="@/assets/img/logo.svg" alt="">
                 <span class="arrow"></span>
             </RouterLink>
         </h1>
