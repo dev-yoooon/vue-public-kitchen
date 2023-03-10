@@ -3,6 +3,7 @@ import { reactive } from 'vue';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
+// import 'swiper/css/pagination';
 
 const props = defineProps({
 });

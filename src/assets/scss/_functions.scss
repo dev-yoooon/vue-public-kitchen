@@ -1,0 +1,14 @@
+@use "sass:string";
+@use "sass:list";
+
+@function split($selector, $append, $limit, $pos){
+  $arr : string.split($selector, ' ');
+  $length: length($arr);
+  $limit:  if( $limit >= $length, $length - 1, $limit ); 
+  $replace: nth($arr, $length - $limit);
+  $set-nth: set-nth($arr, $length - $limit , str-insert($replace, $append, $pos));
+  
+  $list: join((),$set-nth, $separator: space);
+  
+  @return $list;
+}

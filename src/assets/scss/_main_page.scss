@@ -124,6 +124,108 @@
         color: base.$white;
     }
 }
+.kivi {
+	.swiper-slide {
+		overflow: hidden;
+
+		img {
+			transform: scale(1);
+
+            @include base.append('-active') {
+                position: relative;
+                transform: scale(1.1);
+				transition: transform 5s linear;
+            }
+		}
+	}
+
+	.swiper-pagination {
+		display: inline-table;
+		left: 0;
+		bottom: 23px;
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+		table-layout: fixed;
+		border-spacing: 10px;
+
+		.swiper-pagination-bullet {
+			position: relative;
+			display: table-cell;
+			height: 2px;
+			background: rgba(255, 255, 255, 0.7);
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0;
+				height: 100%;
+				min-height: 2px;
+			}
+
+
+			&-active {
+				&:after {
+					width: 100%;
+					background: base.$point-color;
+					transition: width 5s linear;
+
+					@at-root .start#{&} {
+						width: auto;
+						animation: once 5s linear forwards;
+
+						@keyframes once {
+							0% {
+								width: 0;
+							}
+
+							100% {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+			&.prev {
+				&:after {
+					width: 100%;
+					background: base.$point-color;
+				}
+			}
+		}
+	}
+}
+
+
+.paging {
+	.swiper-slide {
+		max-width: 100%;
+		text-align: center;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.swiper-pagination-bullet {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin: 0 7px;
+		border-radius: 50%;
+		background: base.$white;
+		opacity: 0.7;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: base.$point-color;
+		opacity: 1;
+	}
+
+}
 
 .kivi .swiper-pagination {
     bottom: 15px;

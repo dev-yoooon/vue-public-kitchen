@@ -1,3 +1,5 @@
+@use 'functions' as fn;
+
 @mixin font($weight: null, $size: inherit) {
 	font-size: $size;
 	@if ($weight) {
@@ -18,4 +20,17 @@
 	@if ($weight) {
 		font-weight: $weight;
     }
+}
+
+/*!
+	@param {String} $append: 추가할 class 또는 element
+	@param {Number} $pos: 선택 된 클래스 뒤에 append할지 앞에 append할지 선택
+	@param {Number} $limit: 얼마나 앞의 클래스까지 갈건지. 0과 자연수
+*/
+@mixin append($append, $pos: -1, $limit: 1) {
+  $self: #{&};
+
+  @at-root #{fn.split($self, $append, $limit, $pos)} {
+		@content;
+	}
 }
