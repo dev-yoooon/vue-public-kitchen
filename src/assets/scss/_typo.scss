@@ -1,36 +1,38 @@
+@use 'base' as base;
+
 .t {
     &-title1 {
-        @include font(800 !important, 24px !important);
+        @include base.font(800 !important, 24px !important);
         line-height: 1.5;
     }
 
     &-title2 {
-        @include font(600 !important, 22px !important);
+        @include base.font(600 !important, 22px !important);
         line-height: 1.5;
     }
 
     &-title3 {
-        @include font(600 !important, 28px !important);
+        @include base.font(600 !important, 28px !important);
         line-height: 1.5;
     }
 
     &-title4 {
-        @include font(600 !important, 18px !important);
+        @include base.font(600 !important, 18px !important);
         line-height: 1.5;
     }
 
     &-desc1 {
-        @include font($size: 16px !important);
+        @include base.font($size: 16px !important);
         line-height: 1.5;
     }
 
     &-desc2 {
-        @include font(200, 20px !important);
+        @include base.font(200, 20px !important);
         line-height: 1.5;
     }
 
     &-desc3 {
-        @include font(200, 16px !important);
+        @include base.font(200, 16px !important);
         line-height: 1.5;
     }
 
@@ -47,14 +49,14 @@
 .price {
     display: block;
     margin-top: 6px;
-    @include font(600, 20px);
+    @include base.font(600, 20px);
     line-height: 24px;
 
     em {
         margin-right: 5px;
         font-size: 17px;
         font-weight: inherit;
-        color: $point-color;
+        color: base.$point-color;
     }
 
     &-origin {
@@ -69,8 +71,8 @@
     &-dc {
         display: inline-block;
         margin-left: 3px;
-        @include font(600, 18px);
-        color: $point-color;
+        @include base.font(600, 18px);
+        color: base.$point-color;
         vertical-align: text-bottom;
     }
 }

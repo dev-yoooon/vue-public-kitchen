@@ -2,12 +2,20 @@
 @use "sass:list";
 
 @function split($selector, $append, $order, $pos){
-  $arr     : string.split($selector, ' ');
-  $length  : length($arr);
-  $order   : if( $order >= $length, 1, $length - $order);
-  $replace : nth($arr, $order);
-  $reArray : set-nth($arr, $order , str-insert($replace, $append, $pos));
+  $arr         : string.split($selector, ' ');
+  $length      : length($arr);
+  $order       : if( $order >= $length, 1, $length - $order);
+  $replace     : nth($arr, $order);
+  $column      : string.split($replace, ':', $limit: 1);
+  $replaceWord : '';
 
+  @if( length($column) > 1) {
+    $replaceWord : str-insert( nth($column, 1), $append + ':' + nth($column, -1), $pos);
+  } @else {
+    $replaceWord : str-insert($replace, $append, $pos)
+  }
+  
+  $reArray : set-nth($arr, $order , $replaceWord);
   $list    : join((),$reArray, $separator: space);
   
   @return $list;

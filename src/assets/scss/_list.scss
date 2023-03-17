@@ -1,3 +1,5 @@
+@use 'base';
+
 .list {
 
     &-content {
@@ -19,16 +21,16 @@
             span {
                 display: inline-block;
                 position: relative;
-                @include font(400, 15px);
+                @include base.font(400, 15px);
                 margin-right: 8px;
                 padding-left: 8px;
 
                 @at-root .list-mypage & {
-                    color: $gray-83;
+                    color: base.$gray-83;
 
                     &.price {
                         line-height: 20px;
-                        color: $basic-color;
+                        color: base.$basic-color;
                     }
                 }
 
@@ -43,7 +45,7 @@
                     background: #e4e4e4;
 
                     @at-root .list-mypage & {
-                        background: $gray-83;
+                        background: base.$gray-83;
                     }
                 }
 
@@ -77,18 +79,18 @@
 
         ul {
             display: flex;
+            gap: 25px;
             overflow-x: scroll;
             margin-bottom: -30px;
             padding-bottom: 30px;
             padding-left: 25px;
-            padding-right: 5px;
+            padding-right: 30px;
         }
 
         li {
             flex-shrink: 0;
             min-width: 300px;
             width: 80%;
-            padding-right: 20px;
             padding-bottom: 30px;
 
             @at-root .regular#{&} {
@@ -202,8 +204,8 @@
         li {
             position: relative;
             padding: 20px 0;
-            border-top: 1px solid $gray-ea;
-            background: $white;
+            border-top: 1px solid base.$gray-ea;
+            background: base.$white;
 
             &:first-child {
                 border-top: none;
@@ -229,7 +231,7 @@
                         box-sizing: border-box;
                         width: 100%;
                         height: 100%;
-                        border: 2px solid $point-color;
+                        border: 2px solid base.$point-color;
                     }
                 }
             }
@@ -244,7 +246,7 @@
                 position: relative;
                 margin-top: 8px;
                 padding: 16px;
-                background: $white;
+                background: base.$white;
             }
 
             @at-root .check#{&} {
@@ -280,7 +282,7 @@
                     box-sizing: border-box;
                     width: 100%;
                     height: 100%;
-                    border: 2px solid $point-color;
+                    border: 2px solid base.$point-color;
                 }
             }
 
@@ -299,7 +301,7 @@
             padding-left: 11px;
             margin-left: 11px;
             font-size: 14px;
-            color: $gray-b7;
+            color: base.$gray-b7;
 
             &::before {
                 content: '';
@@ -309,7 +311,7 @@
                 top: 50%;
                 width: 1px;
                 height: 13px;
-                background: $gray-b7;
+                background: base.$gray-b7;
                 transform: translateY(-50%);
             }
 
@@ -332,7 +334,7 @@
                 display: inline-block;
                 width: 80%;
                 margin-left: 20px;
-                background: $white;
+                background: base.$white;
 
                 &:last-child {
                     margin-right: 20px;
@@ -356,7 +358,7 @@
     &-num {
         margin-bottom: 10px;
         font-size: 15px;
-        color: $gray-83;
+        color: base.$gray-83;
 
         @at-root .list-content & {
             margin-bottom: 4px;
@@ -365,7 +367,7 @@
 
 
         mark {
-            color: $basic-color;
+            color: base.$basic-color;
         }
 
     }
@@ -415,7 +417,7 @@
         }
 
         ul {
-            border-top: 1px solid $gray-ea;
+            border-top: 1px solid base.$gray-ea;
         }
 
         li {
@@ -423,7 +425,7 @@
             justify-content: space-between;
             padding: 21px 25px;
             line-height: 22px;
-            border-bottom: 1px solid $gray-ea;
+            border-bottom: 1px solid base.$gray-ea;
         }
 
         .al-r {
@@ -432,7 +434,7 @@
 
         .status {
             font-size: 15px;
-            color: $gray-2e;
+            color: base.$gray-2e;
 
             span {
                 display: inline-block;
@@ -447,7 +449,7 @@
                     left: 0;
                     top: 3px;
                     height: 14px;
-                    border-left: 1px solid $gray-b7;
+                    border-left: 1px solid base.$gray-b7;
                 }
 
                 &:first-child {
@@ -463,18 +465,18 @@
         }
 
         .tit {
-            @include font(600, 16px);
+            @include base.font(600, 16px);
         }
 
         .time {
             display: block;
             font-size: 13px;
-            color: $gray-b7;
+            color: base.$gray-b7;
         }
 
         .point {
-            @include font(600, 17px);
-            color: $point-color;
+            @include base.font(600, 17px);
+            color: base.$point-color;
 
             .t-ko {
                 font-size: 16px;
@@ -483,7 +485,7 @@
             small {
                 display: block;
                 font-size: 13px;
-                color: $gray-2e;
+                color: base.$gray-2e;
             }
         }
 
@@ -516,7 +518,7 @@
                 height: 24px;
                 border-radius: 50%;
                 background: rgba(75, 75, 75, .44);
-                border: 2px solid $white;
+                border: 2px solid base.$white;
             }
         }
 
@@ -525,7 +527,7 @@
 
             &:before {
                 border-color: transparent;
-                background: $point-color url(../img/mypage/bg-list_check.png) no-repeat 0 50%/auto 100%;
+                background: base.$point-color url(../img/mypage/bg-list_check.png) no-repeat 0 50%/auto 100%;
             }
         }
 
@@ -565,14 +567,14 @@
             }
 
             &-tit {
-                @include font(600, 16px);
+                @include base.font(600, 16px);
             }
 
             &-msg {
                 overflow: hidden;
                 max-height: 40px;
                 margin-top: 4px;
-                @include font(200, 15px);
+                @include base.font(200, 15px);
                 word-break: break-all;
             }
         }
@@ -590,7 +592,7 @@
         .time {
             display: block;
             font-size: 12px;
-            color: $gray-83;
+            color: base.$gray-83;
             vertical-align: top;
         }
 
@@ -600,10 +602,10 @@
             height: 24px;
             margin-top: 14px;
             border-radius: 50%;
-            background: $point-color;
-            @include font(600, 12px);
+            background: base.$point-color;
+            @include base.font(600, 12px);
             line-height: 24px;
-            color: $white;
+            color: base.$white;
             text-align: center;
             vertical-align: top;
         }
@@ -623,9 +625,9 @@
         margin: 0 5px;
         padding: 0 8px;
         border-radius: 3px;
-        @include font($size: 14px);
+        @include base.font($size: 14px);
         line-height: 23px;
-        color: $white;
+        color: base.$white;
     }
 
     &-new {
@@ -661,8 +663,8 @@
         font-size: 16px;
         line-height: 24px;
         text-align: center;
-        color: $gray-b7;
-        border-bottom: 3px solid $gray-d9;
+        color: base.$gray-b7;
+        border-bottom: 3px solid base.$gray-d9;
 
 
         @at-root .check#{&} {
@@ -677,8 +679,8 @@
             }
 
             &.active {
-                // border-bottom: 3px solid $gray-d9;
-                color: $basic-color;
+                // border-bottom: 3px solid base.$gray-d9;
+                color: base.$basic-color;
 
                 &:after {
                     background-position: 0 0;
@@ -686,7 +688,7 @@
             }
 
             &.dim {
-                color: $basic-color;
+                color: base.$basic-color;
             }
         }
 
@@ -694,20 +696,20 @@
             width: auto;
             padding: 0;
             border-color: transparent;
-            @include font(600, 20px);
+            @include base.font(600, 20px);
             line-height: 29px;
             color: #A2A2A2;
             border-bottom: 0;
         }
 
         &.on {
-            border-bottom-color: $point-color;
+            border-bottom-color: base.$point-color;
             font-weight: 600;
-            color: $point-color;
+            color: base.$point-color;
 
             @at-root .simple#{&} {
                 border-bottom: 0;
-                color: $basic-color;
+                color: base.$basic-color;
             }
         }
     }
@@ -732,11 +734,11 @@
         margin-bottom: 12px;
         padding-left: 9px;
         padding-right: 25px;
-        border: 1px solid $gray-d9;
+        border: 1px solid base.$gray-d9;
         border-radius: 22px;
         font-size: 10px;
         line-height: 22px;
-        color: $gray-2e;
+        color: base.$gray-2e;
         vertical-align: top;
 
         &:before {
@@ -747,7 +749,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: $gray-d9;
+            background: base.$gray-d9;
         }
 
         &:after {
@@ -762,7 +764,7 @@
         &:before {
             right: auto;
             left: 0;
-            background: $point-color;
+            background: base.$point-color;
         }
 
         &:after {

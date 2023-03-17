@@ -104,7 +104,7 @@
 		position: relative;
 		overflow: scroll;
 		box-sizing: border-box;
-		height: calc(100% - 80px);
+		height: calc(100vh - 80px);
 		padding: 20px 25px;
 		background: base.$white;
 		&.ani-enter-active {

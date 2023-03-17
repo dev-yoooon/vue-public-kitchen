@@ -23,7 +23,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     }
   ],
-  linkActiveClass: "active", // active class for non-exact links.
+  linkActiveClass: "", // active class for non-exact links.
   linkExactActiveClass: "active"
 })
 
