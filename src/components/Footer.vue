@@ -24,7 +24,7 @@ const list = {
 </script>
 
 <template>
-    <footer class="footer">
+<footer class="footer">
     <div class="logo"><img src="@/assets/img/footer-logo.png" alt=""></div>
     <ul class="footer-privacy">
         <li v-for="(item, i) in list.privacy" :key="i">
