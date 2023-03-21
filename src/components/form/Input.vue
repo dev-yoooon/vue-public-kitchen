@@ -29,7 +29,7 @@ const resetValue = (val) => {
 
 <template>
 <div class="inp-wrap">
-    <input :type="props.type" :class="props.class" name="" :placeholder="props.placeholder" :title="props.title"
+    <input :type="props.type" :class="props.class" name="search" :placeholder="props.placeholder" :title="props.title"
         ref="inputValue">
     <!-- [D]: focus될 때, value가 빈값이 아닐 때 .hidden 삭제 -->
     <button type="button" class="inp-search_del" title="입력내용 지움"  @click="resetValue"></button>

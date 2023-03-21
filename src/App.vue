@@ -12,3 +12,11 @@ import Footer from './components/Footer.vue'
 </template>
 
 
+<style lang="scss">
+#app {
+  overflow: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  transform: translateZ(0);
+}
+</style>
