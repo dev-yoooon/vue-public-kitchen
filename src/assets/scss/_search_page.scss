@@ -1,3 +1,5 @@
+@use 'base';
+
 .sch-header {
 	.t-title1 {
 		margin-top: 36px;
@@ -16,8 +18,8 @@
 
 .no-msg {
 	padding-top: 15px;
-	@include font(400, 16px);
-	color: $gray-b7;
+	@include base.font(400, 16px);
+	color: base.$gray-b7;
 	text-align: center;
 }
 
@@ -30,7 +32,7 @@
 	h3 {
 		flex: 1 0;
 		margin-bottom: 0;
-		@include font(600, 20px);
+		@include base.font(600, 20px);
 	}
 
 	.more {
@@ -50,7 +52,7 @@
 .more-arrow {
 	display: block;
 	position: relative;
-	@include font(200, 16px);
+	@include base.font(200, 16px);
 
 	strong {
 		margin-right: 5px;
@@ -58,7 +60,7 @@
 	}
 
 	&.small {
-		@include font($weight: 600, $size:16px);
+		@include base.font($weight: 600, $size:16px);
 		.ico-more_arrow{
 			margin-top:-4px;
 			margin-left:2px;
@@ -91,13 +93,13 @@
 		}
 
 		.list-desc {
-			@include font(200, 13px);
+			@include base.font(200, 13px);
 
 			span {
 				position: relative;
 				margin-left: 10px;
 				display: inline-block;
-				@include font(400, 13px);
+				@include base.font(400, 13px);
 
 				&:first-child {
 					margin-left: 0;
@@ -129,7 +131,7 @@
 
 .price {
 
-	@include font(600, 18px);
+	@include base.font(600, 18px);
 
 	em {
 		font-size: 18px;

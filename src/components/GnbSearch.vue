@@ -51,8 +51,8 @@ const isRecent = reactive({
 <template>
 <div class="pop-wrap" v-if="props.isView">
     <div class="pop-cont">
-        <form action="">
-            <Input type="search" class="inp-search" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색" />
+        <form action="/search">
+            <Input type="search" name="k" class="inp-search" placeholder="클래스 / 공간 / 선생님 검색" title="클래스 / 공간 / 선생님 검색" />
             <div class="search-list">
                 <div class="list-wrap">
                     <!-- [D]: 검색어 기능이 켜져있을 때-->

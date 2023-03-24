@@ -63,10 +63,10 @@ const action = reactive({
 <header class="gnb" :class="{'open': action.menu}">
     <div class="gnb-bar">
         <h1 class="logo" @click="action.openMenu">
-            <RouterLink to="/" aria-label="홈으로 가기">
+            <button type="button" title="메뉴">
                 <img src="@/assets/img/logo.svg" alt="">
                 <span class="arrow"></span>
-            </RouterLink>
+            </button>
         </h1>
         <!-- [D]: 버튼의 data-pop값과 팝업 .pop-wrap의 id값은 일치되어야함 -->
         <button class="ico-gnb-search" @click="action.openSearch" aria-label="검색"></button>
