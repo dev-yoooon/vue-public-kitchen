@@ -1,7 +1,7 @@
 <script setup>
 import { reactive } from 'vue';
 import Input from '@/components/form/Input.vue';
-import '@/assets/scss/_search_page.scss';
+import '@/assets/scss/search.scss';
 
 const tab = ['전체', '클래스', '공간', '선생님'];
 
